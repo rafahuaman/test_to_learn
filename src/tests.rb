@@ -30,6 +30,13 @@ else
 	puts "Fail: not one item"
 end
 
+list1.add("get eggs")
+if list1.items.length == 2
+	puts "PASS: has two items"
+else 
+	puts "Fail: does not two items"
+end
+
 if list1.at(0) == "get bread"
 	puts "PASS: gave back the title"
 else
@@ -44,3 +51,11 @@ rescue
 else
 	puts "FAIL: error wasn't raised"
 end
+
+puts "TEST: to_s should print all todo items"
+if list1.to_s ==  "get bread\nget eggs\n"
+	puts "PASS: returns string of complete list"
+else 
+	puts "Fail: does return string of full list - \n#{list1.to_s}"
+end
+

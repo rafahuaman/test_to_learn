@@ -15,11 +15,16 @@ class TodoList
   end
 
   def to_s
-    # do stuff here
+    full_list = ""
+    @list.each do |todo|
+      full_list << todo.title
+      full_list << "\n"
+    end
+    full_list
   end
 
   def items
-    [1]
+    @list
   end
 
   def at(index)
